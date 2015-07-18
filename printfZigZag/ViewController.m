@@ -38,6 +38,7 @@
             stringComplete = [stringComplete stringByAppendingString:[self creatXSpace:n-1-i]];
             stringComplete = [stringComplete stringByAppendingString:symbol];
             for (j=0; j<m-1; j++) {
+                // sử dụng (2*n - 3) thay cho (n + 2) ==> ta có thể thay đổi n và m mà vẫn vẽ được hình zigzag chuẩn.
                 stringComplete = [stringComplete stringByAppendingString:[self creatXSpace:2*n-3]];
                 stringComplete = [stringComplete stringByAppendingString: symbol];
             }
@@ -53,7 +54,7 @@
             for (j=0; j<m-1; j++) {
                 stringComplete = [stringComplete stringByAppendingString:[self creatXSpace:2*i-1]];
                 stringComplete = [stringComplete stringByAppendingString:symbol];
-                stringComplete = [stringComplete stringByAppendingString:[self creatXSpace:(2*n-3)-2*i]];
+                stringComplete = [stringComplete stringByAppendingString:[self creatXSpace:(2*n-3)-2*i]]; // (2*n-3)-2*i thay cho (n+2)-2*i
                 stringComplete = [stringComplete stringByAppendingString:symbol];
             }
             const char *stringComplete1 = [stringComplete UTF8String];
